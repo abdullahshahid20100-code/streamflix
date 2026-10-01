@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "role": {
+      "type": "string",
+      "description": "The role of the user in the app",
+      "enum": [
+        "admin",
+        "user"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "The user's display name collected during registration"
+    },
+    "age": {
+      "type": "number",
+      "description": "The user's age collected during registration"
+    }
+  },
+  "required": [
+    "role"
+  ],
+  "name": "User",
+  "type": "object"
+}
