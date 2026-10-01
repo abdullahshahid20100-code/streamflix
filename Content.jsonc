@@ -1,0 +1,78 @@
+{
+  "name": "Content",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the movie, series, anime, or drama"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short synopsis"
+    },
+    "genre": {
+      "type": "string",
+      "description": "Genre label e.g. Action, Drama, Comedy"
+    },
+    "age": {
+      "type": "string",
+      "description": "Age rating",
+      "default": "13+"
+    },
+    "type": {
+      "type": "string",
+      "description": "Content type",
+      "enum": [
+        "Movie",
+        "Series",
+        "Anime",
+        "Drama"
+      ]
+    },
+    "image": {
+      "type": "string",
+      "description": "Thumbnail image URL"
+    },
+    "video": {
+      "type": "string",
+      "description": "Video URL for movies"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Home page sections this title appears in"
+    },
+    "episodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "season": {
+            "type": "number"
+          },
+          "episode": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Episodes for series, anime, and drama"
+    },
+    "year": {
+      "type": "number",
+      "description": "Release year"
+    }
+  },
+  "required": [
+    "title",
+    "genre",
+    "type"
+  ]
+}
